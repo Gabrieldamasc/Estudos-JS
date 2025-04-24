@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #area{
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo JavaScript</h1>
+    
+    <div id="area" onclick="clicar()" onmouseleave="entrar()">
+        interaja
+    </div>
+
+    <script>
+
+        let click = false
+
+        function clicar(){
+            var a = document.getElementById('area')
+
+            if (!click) {
+                a.style.backgroundColor = 'black'
+                a.innerText = 'clicou'
+            } else {
+                a.style.backgroundColor = 'green'
+                a.innerText = 'interaja'
+            }
+            
+            click = !click
+        }
+
+        
+
+        // function entrar(){
+        //     var a = document.getElementById('area')
+
+        //     alert("Você saiu!")
+        // }
+
+    </script>
+</body>
+</html>
